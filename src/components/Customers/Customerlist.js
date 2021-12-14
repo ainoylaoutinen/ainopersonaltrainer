@@ -4,9 +4,10 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import AddCustomer from "./AddCustomer";
-import EditCustomer from "./EditCustomer";
-import AddTraining from "./AddTraining";
+import EditCustomer from "../EditCustomer";
+import AddTraining from "../Trainings/AddTraining";
 import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
 
 export default function Customerlist() {
   const [customers, setCustomers] = useState([]);
@@ -118,7 +119,6 @@ export default function Customerlist() {
       field: "links",
       cellRendererFramework: (params) => (
         <EditCustomer editCustomer={editCustomer} row={params} />
-        //data comes from params. same as props in editCustomer
       ),
     },
     {
@@ -158,6 +158,12 @@ export default function Customerlist() {
           pagination={true}
           paginationPageSize={10}
           headerHeight={60}
+        />
+        <Snackbar
+          open={open}
+          message={message}
+          autoHideDuration={400}
+          onClose={handleClose}
         />
       </div>
     </div>

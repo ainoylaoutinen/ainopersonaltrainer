@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Customerlist from "./components/Customerlist";
-import Traininglist from "./components/Traininglist";
+import Customerlist from "./components/Customers/Customerlist";
+import Traininglist from "./components/Trainings/Traininglist";
 import Calendar from "./components/Calendar";
 import Statistics from "./components/Statistics";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
