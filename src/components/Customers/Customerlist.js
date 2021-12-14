@@ -4,7 +4,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import AddCustomer from "./AddCustomer";
-import EditCustomer from "../EditCustomer";
+import EditCustomer from "./EditCustomer";
 import AddTraining from "../Trainings/AddTraining";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
